@@ -585,22 +585,22 @@ const AiConsultEntryPage = () => {
     setIsLoading(true); // 버튼을 비활성화
 
     // 사용자 예약 확인
-    console.log("uname.value: ", uname.value);
-    const reservationResult = checkUserReservation(
-      uname.value,
-      phoneNumber.value
-    );
+    // console.log("uname.value: ", uname.value);
+    // const reservationResult = checkUserReservation(
+    //   uname.value,
+    //   phoneNumber.value
+    // );
 
-    if (!reservationResult.success) {
-      MySwal.fire({
-        title: "안내",
-        text: reservationResult.message,
-        icon: "info",
-        confirmButtonText: "확인",
-      });
-      setIsLoading(false); // 로딩 상태 해제
-      return;
-    }
+    // if (!reservationResult.success) {
+    //   MySwal.fire({
+    //     title: "안내",
+    //     text: reservationResult.message,
+    //     icon: "info",
+    //     confirmButtonText: "확인",
+    //   });
+    //   setIsLoading(false); // 로딩 상태 해제
+    //   return;
+    // }
 
     try {
       await dispatch(uploadNewSessionRequest(formData)).unwrap();
